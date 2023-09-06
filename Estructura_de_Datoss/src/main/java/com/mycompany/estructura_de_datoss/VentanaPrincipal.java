@@ -35,6 +35,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         btnSalida = new javax.swing.JButton();
         btnInser = new javax.swing.JButton();
+        btnDispersa = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 255, 204));
@@ -60,9 +61,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(95, 95, 95)
                 .addComponent(lblReloj, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 378, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 353, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(323, 323, 323)
+                .addGap(348, 348, 348)
                 .addComponent(lblFecha)
                 .addGap(93, 93, 93))
         );
@@ -105,11 +106,22 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
 
         btnInser.setBackground(new java.awt.Color(255, 255, 0));
+        btnInser.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnInser.setForeground(new java.awt.Color(0, 0, 0));
         btnInser.setText("Insercción");
         btnInser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInserActionPerformed(evt);
+            }
+        });
+
+        btnDispersa.setBackground(new java.awt.Color(255, 255, 0));
+        btnDispersa.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnDispersa.setForeground(new java.awt.Color(0, 0, 0));
+        btnDispersa.setText("M. Dispersa");
+        btnDispersa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDispersaActionPerformed(evt);
             }
         });
 
@@ -121,16 +133,20 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnInser, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(525, 525, 525))
+                .addComponent(btnDispersa, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(120, 120, 120)
+                .addComponent(btnInser, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(345, 345, 345))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(112, 112, 112)
-                .addComponent(btnInser, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 244, Short.MAX_VALUE)
+                .addGap(94, 94, 94)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnDispersa, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnInser, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 245, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -146,6 +162,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Ven_Inserccion v = new Ven_Inserccion();
         v.setVisible(true);
     }//GEN-LAST:event_btnInserActionPerformed
+
+    private void btnDispersaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDispersaActionPerformed
+        this.setVisible(false);
+        Ven_MDispersa v = new Ven_MDispersa();
+        v.setVisible(true);
+    }//GEN-LAST:event_btnDispersaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,6 +190,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnDispersa;
     private javax.swing.JButton btnInser;
     private javax.swing.JButton btnSalida;
     private javax.swing.JLabel jLabel1;
